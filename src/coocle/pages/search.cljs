@@ -1,30 +1,60 @@
-(ns coocle.pages.search)
+(ns coocle.pages.search
+  (:require [coocle.styles.styles :as styles]))
 
 (def items [{:title "Item 1"
-             :url "http://www.google.com"}
+             :url "http://www.google.com"
+             :description "This is a description"}
             {:title "Item 2"
-             :url "http://www.yahoo.com"}
+             :url "http://www.yahoo.com"
+             :description "This is a description"}
             {:title "Item 3"
-             :url "http://www.bing.com"}
-            {:title "Item 4" 
-             :url "http://www.duckduckgo.com"}])
+             :url "http://www.bing.com"
+             :description "This is a description"}
+            {:title "Item 4"
+             :url "http://www.duckduckgo.com"
+             :description "This is a description"}
+            {:title "Item 5"
+             :url "http://www.ask.com"
+             :description "This is a description"}
+            {:title "item 6"
+             :url "http://www.baidu.com"
+             :description "This is a description"}
+            {:title "Item 1"
+             :url "http://www.google.com"
+             :description "This is a description"}
+            {:title "Item 2"
+             :url "http://www.yahoo.com"
+             :description "This is a description"}
+            {:title "Item 3"
+             :url "http://www.bing.com"
+             :description "This is a description"}
+            {:title "Item 4"
+             :url "http://www.duckduckgo.com"
+             :description "This is a description"}
+            {:title "Item 5"
+             :url "http://www.ask.com"
+             :description "This is a description"}
+            {:title "item 6"
+             :url "http://www.baidu.com"
+             :description "This is a description"}]) 
 
 (defn searh-page
   []
   [:div
-   [:div
-    [:h1 "CLOOCLE"]]
-   [:div {:class "search-div"}
-    [:form {:class "search-form"}
-     [:input {:class "search-input" :type "text"}]
-     [:button {:class "search-button"} "Search"]]]
-   [:div {:class "search-results"}
-    [:ul
+   [:div {:style styles/logo-container}
+    [:h1 {:style styles/logo} "COOCLE"]]
+   [:div {:style styles/search-container}
+    [:form {:style styles/search-form}
+     [:input {:style styles/search-input :type "text"}]
+     [:button {:style styles/search-button} "Search"]]]
+   [:div {:style styles/search-results}
+    [:ul {:style styles/search-result-nav}
      (for [item items]
        [:li
-        [:div {:class "search-result"}
-         [:div {:class "search-result-title"}
+        [:div {:style styles/search-result-item}
+         [:div
           [:a {:href (:url item)}
-           [:span {:class "search-result-title-text"} (:title item)]]
-          [:div {:class "search-result-description"}
-           [:span {:class "search-result-description-text"}]]]]])]]])
+           [:span (:title item)]]
+          [:div
+           [:span
+            (:description item)]]]]])]]])
