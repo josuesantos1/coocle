@@ -15,3 +15,7 @@ pom.xml.asc
 *.log
 /.env
 /node_modules
+
+.clj-kondo
+.lsp
+.shadow-cljs
