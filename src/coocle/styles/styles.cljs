@@ -7,13 +7,14 @@
    :text-align "center"})
 
 (def logo
-  {:font-size "15vh"})
+  {:font-size "5vw"})
 
 (def search-container
   {:height "6vh"
-   :width "100%"
+   :width "40vw"
    :border "3px solid #ccc"
-   :border-radius "10vh"})
+   :border-radius "10vh"
+   :margin "0 auto"})
 
 (def search-form
   {:height "40%"
@@ -30,7 +31,7 @@
    :border "none"
    :padding-bottom "0.8vh"
    :margin "10px"
-   :width "80%"
+   :width "100%"
    :height "4vh"
    :background-color "transparent"
    :outline "none"})
@@ -47,10 +48,10 @@
    :background-color "transparent"
    :cursor "pointer"})
 
-
 (def search-results
-  {:height "40vh"
-   :width "100%"})
+  {:height "60vh"
+   :width "100%"
+   :overflow-y "scroll"})
 
 (def search-result-nav
   {:list-style-type "none"

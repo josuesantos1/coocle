@@ -40,7 +40,7 @@
 
 (defn searh-page
   []
-  [:div
+  [:div 
    [:div {:style styles/logo-container}
     [:h1 {:style styles/logo} "COOCLE"]]
    [:div {:style styles/search-container}
