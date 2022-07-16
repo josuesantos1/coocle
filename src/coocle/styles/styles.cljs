@@ -62,5 +62,24 @@
   {:border-bottom "1px solid #ccc"
    :padding "10px"})
 
+(def search-about-container
+  {:max-width "100%"
+   :margin "0 auto"
+   :padding "0"
+   :display "flex"
+   :flex-direction "row"
+   :justify-content "space-between"})
 
+(def search-result-description
+  {:font-size "2vh"
+   :font-family "sans-serif"
+   :margin "0 10px 0 0"
+   :text-overflow "ellipsis"
+   :overflow "hidden"
+   :white-space "wrap"
+   :max-height "15vh"})
 
+(def search-result-site
+  {:font-size "2vh"
+   :font-family "sans-serif"
+   :margin "0 10px 0 0"})
